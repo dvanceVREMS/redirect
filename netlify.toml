@@ -1,0 +1,23 @@
+[build]
+  functions = "./functions"
+  publish = "public"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/track"
+  to = "/.netlify/functions/track-email"
+  status = 200
+
+[[redirects]]
+  from = "/click"
+  to = "/.netlify/functions/track-click"
+  status = 200
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"

@@ -1,0 +1,7 @@
+# Zendesk webhook endpoints
+/zendesk/webhook   /.netlify/functions/email-webhook   200
+/track             /.netlify/functions/track-email     200
+/click             /.netlify/functions/track-click     200
+
+# Fallback redirect
+/*   /index.html   200
